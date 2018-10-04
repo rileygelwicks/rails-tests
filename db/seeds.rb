@@ -9,3 +9,5 @@
 
 facility = Facility.create(name: 'Blue Alps Ski Camp')
 thomas = Patient.create(first_name: 'Thomas', middle_name: 'Frank', last_name: 'White', mr: '546542', gender: 0, facility: facility)
+thomas_admission = Admission.create(moment: 1.week.ago , patient: thomas)
+thomas_admission_2 = Admission.create(moment: 1.day.ago, patient: thomas)
