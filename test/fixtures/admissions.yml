@@ -1,0 +1,14 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  moment: 2018-10-04 10:20:11
+  patient: patient(:john)
+
+two:
+  moment: 2018-10-01 10:20:11
+  patient: patient(:jane).id
+
+john_second_admission:
+  moment: 2018-10-04 10:24:11
+  patient: patient(:john)
+

@@ -1,19 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+john:
+  id: 1
   first_name: John
   middle_name: Douglas
   last_name: Doe
   mr: 0000-44444
   dob: 1971-10-03 22:47:36
   gender: 1
-  admission_id: 1
+  
 
-two:
+jane:
+  id: 2
   first_name: Jane
   middle_name: Mane
   last_name: Doe
   mr: 0000-44441
   dob: 2001-10-03 22:47:36
   gender: 0
-  admission_id: 1
+  
