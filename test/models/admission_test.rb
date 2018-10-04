@@ -19,4 +19,9 @@ class AdmissionTest < ActiveSupport::TestCase
     admission = admissions(:two)
     assert_equal 'October 1st, 2018', admission.date
   end
+
+  test "time should return admission moment time" do
+    admission = admissions(:two)
+    assert_equal '10:20 am', admission.time
+  end
 end
