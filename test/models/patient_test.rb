@@ -17,4 +17,10 @@ class PatientTest < ActiveSupport::TestCase
   test "patients most recent admission is returned" do
     patient = patients(:john)
   end
+
+  test "patients age should be calculated from DOB and returned in years" do
+    patient = patients(:john)
+    p patient.age
+    assert_equal patient.age, 47
+  end
 end
