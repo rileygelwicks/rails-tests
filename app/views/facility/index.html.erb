@@ -1,0 +1,3 @@
+<% @facilities.each do |facility| %>
+  <h3><%= link_to facility.name, facility_path(facility) %></h3>
+<% end %>

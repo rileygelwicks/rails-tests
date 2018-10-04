@@ -1,0 +1,5 @@
+<h3><%= @facility.name %> Current Patients</h3>
+
+<% @facility.patients.each do |patient| %>
+  <p><%= link_to patient.full_name, facility_patient_path(@facility, patient)%></p>
+<% end %>
