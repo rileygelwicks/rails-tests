@@ -1,5 +1,22 @@
-<h3><%= @facility.name %> Current Patients</h3>
 
+<div class="page-header">
+  <h1><%= @facility.name %></h1>
+  <h4>Current Patients</h4>
+</div>
+
+<table class="table table-striped">
+  <tr>
+  <th>MR No.</th>
+  <th>Name</th>
+  <th>DOB</th>
+  <th>Admission Date</th>
+  </tr>
 <% @facility.patients.each do |patient| %>
-  <p><%= link_to patient.full_name, facility_patient_path(@facility, patient)%></p>
+  <tr>
+  <td><%= patient.mr %></td>
+  <td><%= link_to patient.formal_name, facility_patient_path(@facility, patient)%></td>
+  <td><%= patient.dob.to_date %></td>
+  <td><%= patient.admission.date%></td>
+  </tr>
 <% end %>
+</table>

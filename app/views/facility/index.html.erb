@@ -1,3 +1,6 @@
+<div class="page-header">
+  <h1>Facilities</h1>
+</div>
 <% @facilities.each do |facility| %>
   <h3><%= link_to facility.name, facility_path(facility) %></h3>
 <% end %>
