@@ -8,6 +8,11 @@
 
 
 facility = Facility.create(name: 'Blue Alps Ski Camp')
-thomas = Patient.create(first_name: 'Thomas', middle_name: 'Frank', last_name: 'White', mr: '546542', gender: 0, facility: facility)
+
+thomas = Patient.create(first_name: 'Thomas', middle_name: 'Frank', last_name: 'Schudel', mr: '546542', gender: 0, facility: facility, dob: '1976-10-20')
+
 thomas_admission = Admission.create(moment: 1.week.ago , patient: thomas)
+
 thomas_admission_2 = Admission.create(moment: 1.day.ago, patient: thomas)
+
+diagnosis = Diagnosis.create(code: 'S82.101', description: "fracture of upper end of the right tibia", patient: thomas)

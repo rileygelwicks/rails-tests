@@ -1,6 +1,7 @@
 class Patient < ApplicationRecord
   belongs_to :facility, optional: false
   has_many :admissions
+  has_many :diagnoses
 
   enum gender: [
     :male,

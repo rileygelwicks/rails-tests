@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  coding_system: MyString
+  code: MyString
+  description: MyText
+  patient_id: 1
+  admission_id: 1
+
+two:
+  coding_system: MyString
+  code: MyString
+  description: MyText
+  patient_id: 1
+  admission_id: 1
