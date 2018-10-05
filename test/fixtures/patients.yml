@@ -8,6 +8,7 @@ john:
   mr: 0000-44444
   dob: 1971-10-03 22:47:36
   gender: 1
+  facility: two
   
 
 jane:
@@ -18,4 +19,5 @@ jane:
   mr: 0000-44441
   dob: 2001-10-03 22:47:36
   gender: 0
+  facility: one
   
