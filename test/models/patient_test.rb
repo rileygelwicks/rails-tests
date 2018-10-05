@@ -28,4 +28,8 @@ class PatientTest < ActiveSupport::TestCase
     john = patients(:john)
     assert john.admission.observations.presence, "observations should be present"
   end
+
+  test "patients should have allergies" do 
+    assert patients(:jane).allergies.presence, "Jane is missing allergies"
+  end
 end
