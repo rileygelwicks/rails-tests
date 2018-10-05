@@ -16,10 +16,16 @@ class PatientTest < ActiveSupport::TestCase
 
   test "patients most recent admission is returned" do
     patient = patients(:john)
+    assert_equal patient.admission.moment, patient.admissions.order(created_at: :desc).first.moment 
   end
 
   test "patients age should be calculated from DOB and returned in years" do
     patient = patients(:john)
     assert_equal patient.age, 47
+  end
+
+  test "patients should have observations on their admissions" do 
+    john = patients(:john)
+    assert john.admission.observations.presence, "observations should be present"
   end
 end

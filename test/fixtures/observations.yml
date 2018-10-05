@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: No soft tissues were damaged.
+  moment: 2018-10-04 22:28:04
+  admission: john_second_admission
+
+two:
+  description: Compound fracture in the right arm.
+  moment: 2018-10-04 22:28:04
+  admission: two
+
+

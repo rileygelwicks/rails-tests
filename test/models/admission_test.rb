@@ -24,4 +24,8 @@ class AdmissionTest < ActiveSupport::TestCase
     admission = admissions(:two)
     assert_equal '10:20 am', admission.time
   end
+
+  test "admissions should have observations" do
+    assert admissions(:two).observations.presence
+  end
 end
