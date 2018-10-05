@@ -2,13 +2,13 @@
 
 one:
   moment: 2018-10-04 10:20:11
-  patient: patient(:john)
+  patient: john
 
 two:
   moment: 2018-10-01 10:20:11
-  patient: patient(:jane).id
+  patient: jane
 
 john_second_admission:
   moment: 2018-10-04 10:24:11
-  patient: patient(:john)
+  patient: john
 

@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 john:
-  id: 1
+  # id: 1
   first_name: John
   middle_name: Douglas
   last_name: Doe
@@ -11,7 +11,7 @@ john:
   
 
 jane:
-  id: 2
+  # id: 2
   first_name: Jane
   middle_name: Mane
   last_name: Doe

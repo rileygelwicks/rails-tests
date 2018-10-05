@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  coding_system: MyString
-  code: MyString
-  description: MyText
-  patient_id: 1
-  admission_id: 1
+  coding_system: ICD-10-CM
+  code: (S82.101A)
+  description: closed fracture in the right tibia 
+  patient: john
+  admission: one
 
 two:
-  coding_system: MyString
-  code: MyString
-  description: MyText
-  patient_id: 1
-  admission_id: 1
+  coding_system: ICD-10-CM
+  code: (S82.101)
+  description: fracture of upper end of the right tibia
+  patient: john
+  admission: one
