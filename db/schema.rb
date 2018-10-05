@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_04_185822) do
+ActiveRecord::Schema.define(version: 2018_10_05_044252) do
 
   create_table "admissions", force: :cascade do |t|
     t.datetime "moment"
@@ -43,6 +43,13 @@ ActiveRecord::Schema.define(version: 2018_10_04_185822) do
     t.datetime "dob"
     t.integer "gender"
     t.integer "facility_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "symptoms", force: :cascade do |t|
+    t.text "description"
+    t.integer "admission_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
