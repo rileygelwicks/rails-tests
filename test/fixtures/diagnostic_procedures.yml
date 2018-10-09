@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: exploratory radiography
+  moment: 2018-10-05 17:06:37
+  patient: john
+
+two:
+  description: deep tissue massage
+  moment: 2018-10-07 11:06:37
+  patient: jane

@@ -40,4 +40,8 @@ class PatientTest < ActiveSupport::TestCase
   test "patients have many medication orders" do
     assert patients(:john).medication_orders.count > 1, "John should have more than one MO."
   end
+
+  test "patients have many diagnostic procedures" do
+    assert patients(:john).diagnostic_procedures.count > 0
+  end
 end

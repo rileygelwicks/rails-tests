@@ -1,8 +1,10 @@
 class Patient < ApplicationRecord
   belongs_to :facility, optional: false
+  
   has_many :admissions
-  has_many :diagnoses
   has_many :allergies
+  has_many :diagnoses
+  has_many :diagnostic_procedures
   has_many :medication_orders
 
   enum gender: [
