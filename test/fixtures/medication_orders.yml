@@ -1,0 +1,22 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Acetaminophen
+  unit: 0
+  dosage: 500
+  route: 0
+  patient: jane
+
+two:
+  name: Naproxen
+  unit: 0
+  dosage: 500
+  route: 1
+  patient: john
+
+three:
+  name: Nitrous Oxide
+  unit: 0
+  dosage: 500
+  route: 1
+  patient: john

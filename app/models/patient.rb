@@ -3,6 +3,7 @@ class Patient < ApplicationRecord
   has_many :admissions
   has_many :diagnoses
   has_many :allergies
+  has_many :medication_orders
 
   enum gender: [
     :male,

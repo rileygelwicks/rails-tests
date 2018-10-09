@@ -29,7 +29,15 @@ class PatientTest < ActiveSupport::TestCase
     assert john.admission.observations.presence, "observations should be present"
   end
 
+  test "patients should have many diagnoses" do 
+    assert patients(:john).diagnoses.count > 1, "John should have two diagnoses"
+  end
+
   test "patients should have allergies" do 
     assert patients(:jane).allergies.presence, "Jane is missing allergies"
+  end
+
+  test "patients have many medication orders" do
+    assert patients(:john).medication_orders.count > 1, "John should have more than one MO."
   end
 end
