@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  value: q4
+  unit: 0
+  medication_order: one
+
+two:
+  value: q6
+  unit: 0
+  medication_order: two
