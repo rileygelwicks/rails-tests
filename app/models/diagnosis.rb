@@ -10,4 +10,8 @@ class Diagnosis < ApplicationRecord
     :acute,
     :other
   ]
+
+  def described_code
+    "#{description} #{code}"
+  end
 end
