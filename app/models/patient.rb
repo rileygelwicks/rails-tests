@@ -5,7 +5,8 @@ class Patient < ApplicationRecord
   has_many :allergies
   has_many :diagnoses
   has_many :diagnostic_procedures
-  has_many :medication_orders
+  has_many :medications, class_name: 'MedicationOrder'
+  has_many :treatments
 
   enum gender: [
     :male,

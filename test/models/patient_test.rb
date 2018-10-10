@@ -1,9 +1,7 @@
 require 'test_helper'
 
 class PatientTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
   test "patient belongs_to facility assoc works" do
     p = Patient.create(first_name: "john", facility: facilities(:one))
     assert p.facility.present?
@@ -37,11 +35,16 @@ class PatientTest < ActiveSupport::TestCase
     assert patients(:jane).allergies.presence, "Jane is missing allergies"
   end
 
-  test "patients have many medication orders" do
-    assert patients(:john).medication_orders.count > 1, "John should have more than one MO."
+  test "patients have many medications" do
+    assert patients(:john).medications.count > 1, "John should have more than one MO."
   end
 
   test "patients have many diagnostic procedures" do
     assert patients(:john).diagnostic_procedures.count > 0
   end
+
+  test "patients should have treatments" do
+    assert patients(:jane).treatments.presence
+  end
+
 end

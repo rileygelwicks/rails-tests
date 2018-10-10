@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: temporary bracing the right leg
+  necessity: restrict the motion
+  patient: john
+
+two:
+  description: apply stitches
+  necessity: close the wound
+  patient: jane
