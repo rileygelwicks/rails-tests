@@ -22,3 +22,11 @@ three:
   description: Emphzema
   patient: john
   condition_type: 0
+
+four:
+  coding_system: ICD-10-CM
+  code: (S82.101A)
+  description: closed fracture in the right tibia 
+  # patient: jane
+  admission: two
+  condition_type: 1
