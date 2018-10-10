@@ -6,6 +6,7 @@ one:
   dosage: 500
   route: 0
   patient: jane
+  necessity: relieve pain
 
 two:
   name: Naproxen
@@ -13,6 +14,7 @@ two:
   dosage: 500
   route: 1
   patient: john
+  necessity: Relieve swelling
 
 three:
   name: Nitrous Oxide
@@ -20,3 +22,4 @@ three:
   dosage: 500
   route: 1
   patient: john
+  necessity: relieve anxiety
