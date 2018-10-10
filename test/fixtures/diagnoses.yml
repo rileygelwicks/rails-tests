@@ -6,6 +6,7 @@ one:
   description: closed fracture in the right tibia 
   patient: john
   admission: one
+  condition_type: 1
 
 two:
   coding_system: ICD-10-CM
@@ -13,3 +14,11 @@ two:
   description: fracture of upper end of the right tibia
   patient: john
   admission: one
+  condition_type: 1
+
+three:
+  coding_system: ICD-10-CM
+  code: (S93.101)
+  description: Emphzema
+  patient: john
+  condition_type: 0

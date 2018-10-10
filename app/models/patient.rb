@@ -3,7 +3,7 @@ class Patient < ApplicationRecord
   
   has_many :admissions
   has_many :allergies
-  has_many :diagnoses
+  has_many :diagnoses 
   has_many :diagnostic_procedures
   has_many :medications, class_name: 'MedicationOrder'
   has_many :treatments
@@ -28,5 +28,9 @@ class Patient < ApplicationRecord
   
   def full_name
   "#{first_name} #{middle_name} #{last_name}"
+  end
+
+  def chronic_conditions
+    diagnoses.unscoped.chronic
   end
 end

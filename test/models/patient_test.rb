@@ -46,5 +46,8 @@ class PatientTest < ActiveSupport::TestCase
   test "patients should have treatments" do
     assert patients(:jane).treatments.presence
   end
-
+  
+  test "patients should have chronic conditions" do
+    assert patients(:john).chronic_conditions.presence
+  end
 end
