@@ -15,4 +15,8 @@ class MedicationOrder < ApplicationRecord
   def frequency
     "#{order_frequency&.value}#{order_frequency&.unit}"
   end
+
+  def dosage
+    super.to_i.to_s + unit
+  end
 end
