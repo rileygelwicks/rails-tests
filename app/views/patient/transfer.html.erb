@@ -1,1 +1,72 @@
-<h1>Transfer order for <%= @patient.full_name %>
+<div class="panel-group">
+<div class="row">
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <strong>Emergency Transfer Summary (Form 34L-D)</strong>
+    </div>
+  </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <strong>Transferring Facility</strong>
+          </div>
+          <div class="panel panel-body">
+              <p class="text">Name</p>
+              <p class="text text-primary"><%= @facility.name %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="row">
+  <div class="panel panel-default border">
+    <div class="panel-heading">
+      <strong>Patient Information</strong>
+    </div>
+    <div class="row panel-body">
+      <div class="col-xs-3 ">
+        <div class=" border border-secondary panel-body">
+          <p class="text ">First Name</p>
+          <p class="text text-primary "><%= @patient.first_name %></p>
+        </div>
+      </div>
+      <div class="col-xs-3">
+        <div class=" border border-secondary panel-body">
+          <p class="text ">Middle Name</p>
+          <p class="text text-primary "><%= @patient.middle_name %></p>
+        </div>
+      </div>
+      <div class="col-xs-3 ">
+        <div class=" border border-secondary panel-body">
+          <p class="text ">Last Name</p>
+          <p class="text text-primary "><%= @patient.last_name %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <strong>Summary</strong>
+    </div>
+    <div class="panel-body">
+      <p>
+        This <%=@patient.age%> years old <%=@patient.gender%> was admitted to <%=@patient.facility.name%> on <%=@patient.admission.date%> at <%=@patient.admission.time%> due to <%=@patient.admission.diagnoses.map{|d| d.described_code}.join(", ")%>. 
+        The observed symptoms on admission were <%=@patient.admission.symptoms.pluck(:description).join(", ")%>.
+        <%=@patient.admission.observations.pluck(:description).join(", ") %>.
+      </p>
+      <p>
+        Upon asking about known allergies, the patient disclosed <%=@patient.allergies.pluck(:description).join(", ") %>. 
+        Upon asking about chronic conditions, the patient disclosed <%=@patient.chronic_conditions.map{|cc| cc.described_code}.join(", ")%>. 
+        The patient was administered with <%= @patient.medications.map{|med| "#{med.name} #{med.dosage} #{med.route} #{med.frequency} to #{med.necessity}"}.join(", ") %>.
+      </p>
+      <p>
+        The staff performed <%=@patient.diagnostic_procedures.map{|dp| "#{dp.description} at #{dp.time}"}.join(", ") %>, revealing <%= @patient.diagnoses.map{|d| d.described_code}.join(", ") %>.
+        Our team proceeded to <%=@patient.treatments.pluck(:description, :to, :necessity).map{|d| d.join(" ")}.join(", ")%>.
+      </p>
+    </div>
+  </div>
+</div>
+</div>
