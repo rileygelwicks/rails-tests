@@ -43,6 +43,12 @@
           <p class="text text-primary "><%= @patient.last_name %></p>
         </div>
       </div>
+      <div class="col-xs-3 ">
+          <div class=" border border-secondary panel-body">
+            <p class="text ">Medical Record</p>
+            <p class="text text-primary "><%= @patient.mr %></p>
+          </div>
+        </div>
     </div>
   </div>
 </div>
@@ -70,4 +76,4 @@
   </div>
 </div>
 </div>
-<button class="btn btn-primary" onclick="printDiv('print-form')" value="print a div!">Print</button>
+<button class="btn btn-primary" onclick="printDiv('print-form')" value="print a div!">Print Form</button>
