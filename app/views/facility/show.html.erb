@@ -10,13 +10,15 @@
   <th>Name</th>
   <th>DOB</th>
   <th>Admission Date</th>
+  <th>Actions</th>
   </tr>
 <% @facility.patients.each do |patient| %>
   <tr>
   <td><%= patient.mr %></td>
-  <td><%= link_to patient.formal_name, facility_patient_path(@facility, patient)%></td>
+  <td><%= patient.formal_name %></td>
   <td><%= patient.dob.to_date %></td>
   <td><%= patient.admission.date%></td>
+  <td><%= link_to "Transfer Form", transfer_facility_patient_path(@facility, patient)%></td>
   </tr>
 <% end %>
 </table>
