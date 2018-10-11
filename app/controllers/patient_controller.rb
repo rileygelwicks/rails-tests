@@ -4,6 +4,7 @@ class PatientController < ApplicationController
   end
 
   def transfer
-    @patient = Patient.find(params[:id])
+    @patient = Patient.includes(:facility, :admissions, :diagnoses).find(params[:id])
+    @facility = @patient.facility
   end
 end
